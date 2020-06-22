@@ -1,0 +1,21 @@
+name: 'AWS EKS'
+description: 'AWS EKS'
+branding:
+  icon: 'compass'
+  color: 'blue'
+inputs:
+  exec:
+    description: 'The command to run (aws, kubectl, helm)'
+    required: true
+  aws-access-key-id:
+    description: 'aws-access-key-id'
+    required: true
+  aws-secret-access-key:
+    description: 'aws-secret-access-key'
+    required: true
+  aws-region:
+    description: 'aws-region'
+    required: false
+runs:
+  using: 'docker'
+  image: 'docker://easi/aws-eks:latest'
